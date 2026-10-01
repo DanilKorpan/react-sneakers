@@ -1,0 +1,83 @@
+.card-skeleton {
+  width: 100%;
+  min-height: 274px;
+  box-sizing: border-box;
+  padding: 20px 25px 50px;
+  border: 1px solid #f3f3f3;
+  border-radius: 40px;
+  background: #fff;
+  position: relative;
+
+  &__image,
+  &__title,
+  &__label,
+  &__price,
+  &__button,
+  &__favorite {
+    background: linear-gradient(90deg, #f3f3f3 25%, #fafafa 50%, #f3f3f3 75%);
+    background-size: 200% 100%;
+    animation: card-skeleton-shimmer 1.5s infinite;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  &__image {
+    width: 133px;
+    height: 133px;
+    margin: 0 auto 14px;
+    border-radius: 12px;
+  }
+
+  &__title {
+    width: 85%;
+    height: 17px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 32px;
+  }
+
+  &__label {
+    width: 43px;
+    height: 11px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+
+  &__price {
+    width: 75px;
+    height: 15px;
+    border-radius: 4px;
+  }
+
+  &__button {
+    position: absolute;
+    right: 29px;
+    bottom: 27px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+}
+
+@keyframes card-skeleton-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}

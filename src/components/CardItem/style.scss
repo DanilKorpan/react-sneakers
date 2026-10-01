@@ -1,0 +1,95 @@
+.card {
+  border: 1px solid #f3f3f3;
+  width: 100%;
+  border-radius: 40px;
+  position: relative;
+  padding: 20px 25px 30px 25px;
+  box-sizing: border-box;
+  min-height: 260px;
+
+  &__favorite {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .img__main {
+    width: 133px;
+    display: block;
+    margin: 0 auto 14px auto;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 0 0 14px 0;
+    padding: 0;
+    letter-spacing: -0.2px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-weight: 500;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #bdbdbd;
+    }
+
+    b {
+      font-weight: 700;
+      font-size: 14px;
+      color: #000;
+    }
+  }
+
+  &__add-btn {
+    position: absolute;
+    right: 29px;
+    bottom: 27px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 18px 18px 26px;
+    min-height: 230px;
+
+    &__favorite {
+      top: 18px;
+      left: 18px;
+    }
+
+    .img__main {
+      width: 110px;
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-size: 13px;
+      line-height: 16px;
+      margin-bottom: 12px;
+    }
+
+    &__add-btn {
+      right: 18px;
+      bottom: 20px;
+    }
+  }
+}

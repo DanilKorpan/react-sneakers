@@ -1,0 +1,115 @@
+.favorite__box {
+  .favorite__top {
+    margin-top: 44px;
+    margin-bottom: 42px;
+    display: flex;
+    gap: 21px;
+    align-items: center;
+  }
+
+  .favorite__list-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .favorite__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 274px;
+
+    .favorite__emoji {
+      font-size: 70px;
+    }
+
+    .favorite__empty-title {
+      font-weight: 600;
+      font-size: 24px;
+      color: #000;
+      padding-bottom: 11px;
+    }
+
+    .favorite__empty-text {
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      opacity: 0.4;
+      padding-bottom: 70px;
+    }
+
+    .green__button {
+      width: 245px;
+      height: 55px;
+      background: #9dd558;
+      border-radius: 18px;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: background 0.2s ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .favorite__box {
+    .favorite__list-items {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .favorite__box {
+    .favorite__list-items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .favorite__empty {
+      padding-top: 140px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .favorite__box {
+    .favorite__top {
+      margin-top: 24px;
+      margin-bottom: 28px;
+    }
+
+    .favorite__list-items {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .favorite__empty {
+      padding-top: 90px;
+
+      .favorite__empty-title {
+        font-size: 20px;
+      }
+
+      .favorite__empty-text {
+        padding-bottom: 34px;
+      }
+
+      .green__button {
+        width: 100%;
+        max-width: 245px;
+      }
+    }
+  }
+}

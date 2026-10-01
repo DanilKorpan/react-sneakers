@@ -1,0 +1,91 @@
+/* 1. Настройка box-sizing и убирание внешних отступов у всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Сброс списков (теперь работает для любых ul и ol) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 3. Базовые настройки для body и HTML */
+html {
+  /* Плавный скролл с поддержкой современных браузеров */
+  scroll-behavior: smooth;
+  /* Улучшенное рендеринг шрифтов на macOS/iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* 4. Полный сброс для ссылок */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Дополнительно: сброс только для ссылок без класса, если нужен доступный подчёркнутый стиль */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* 5. Улучшенная работа с медиа-контентом */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Наследование шрифтов и единый вид для форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+/* Убираем дефолтную рамку у кнопок и делаем их кликабельными */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Фикс переполнения textarea */
+textarea {
+  resize: vertical;
+}
+
+/* 7. Убираем анимации при prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
